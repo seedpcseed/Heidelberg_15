@@ -406,11 +406,11 @@ class Aptamer:
     global _HYBRID
 
     def __init__(self, forcefield_name, ligand_mol2_path):
-        self.process = pexpect.spawn('tleap -f'+forcefield_name)
-        self.process.sendline('source leaprc.gaff')
-        self.process.sendline("set default PBradii mbondi2")
-        self.process.sendline("ligand = load"+_FORMAT+" "+ligand_mol2_path)
-        if _HYBRID != "":
+		self.process = pexpect.spawn('tleap -f'+forcefield_name)
+       	self.process.sendline('source leaprc.gaff')
+       	self.process.sendline("set default PBradii mbondi2")
+       	self.process.sendline("ligand = load"+_FORMAT+" "+ligand_mol2_path)
+		if _HYBRID != "":
 			self.process.sendline("loadamberparams "+_HYBRID)
 			self.geometry = []
 			self.position = [0, 0, 0]
