@@ -411,12 +411,12 @@ class Aptamer:
         self.process.sendline("set default PBradii mbondi2")
         self.process.sendline("ligand = load"+_FORMAT+" "+ligand_mol2_path)
         if _HYBRID != "":
-	    	self.process.sendline("loadamberparams "+_HYBRID)
-	    	self.geometry = []
+			self.process.sendline("loadamberparams "+_HYBRID)
+			self.geometry = []
 			self.position = [0, 0, 0]
 			self.orientation = [0, 0, 0]
-        #global lig_energy
-        #self.lig_energy = lig_energy
+			#global lig_energy
+			#self.lig_energy = lig_energy
         
     def atom_position(self, identifier, residue_ID, atom_ID):
         self.process.sendline("desc "+identifier+"."+str(residue_ID)+"."+str(atom_ID))
