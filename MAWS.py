@@ -1163,8 +1163,8 @@ def loop():
         for elem in pos_Nt:
             Ntides.append(elem[1])
         for elem in pos_Nt:
-        positions.append(elem[0])
-        print("Chosen sequences are: ")
+            positions.append(elem[0])
+            print("Chosen sequences are: ")
         for elem in pos_Nt:
             print(elem[1])
         
