@@ -1164,7 +1164,7 @@ def loop():
             Ntides.append(elem[1])
         for elem in pos_Nt:
             positions.append(elem[0])
-            print("Chosen sequences are: ")
+	    print("Chosen sequences are: ")
         for elem in pos_Nt:
             print(elem[1])
         
